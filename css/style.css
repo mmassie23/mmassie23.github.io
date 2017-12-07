@@ -15,6 +15,9 @@ ul{
 	list-style-type: none;
 	padding: 0;
 }
+header figure img{
+	-webkit-transform: rotate(0.25turn);
+}
 /* Mobile first style */
 @media screen and (min-width: 220px){
 	header{
@@ -26,8 +29,6 @@ ul{
 	header figure img{
 		width: 250px;
 		height: 200px;
-		-webkit-transform: rotate(0.25turn);
-		/* transform: rotate(0.25turn); */
 		border-radius: 50% 50%;
 		margin-top: 15%;
 	}
@@ -102,7 +103,6 @@ ul{
 	header figure img{
 		width: 300px;
 		height: 250px;
-		transform: rotate(0.25turn);
 		border-radius: 50% 50%;
 		margin: 8% 0 0 10%;
 	}
