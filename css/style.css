@@ -24,8 +24,8 @@ ul{
 		margin-top: -5%;
 	}
 	header figure img{
-		width: 250px;
-		height: 200px;
+		width: 200px;
+		height: 250px;
 		border-radius: 50% 50%;
 		margin-top: 15%;
 	}
@@ -98,7 +98,7 @@ ul{
 	}
 	
 	header figure img{
-		width: 300px;
+		width: 250px;
 		height: 300px;
 		border-radius: 50% 50%;
 		margin: 8% 0 0 10%;
