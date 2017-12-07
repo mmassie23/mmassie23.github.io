@@ -1,0 +1,23 @@
+/*
+File: projects.css
+Author: Marquis Massie
+Email: massiemarquis@gmail.com
+*/
+.container img{
+    border: none;
+    padding: 0;
+    margin-bottom: 10%;   
+}
+.container p{
+    margin-bottom: 30%;
+}
+@media only screen and (min-width: 401px){
+    .container img{
+        border: none;
+        padding: 0;
+        margin-bottom: 10px;   
+    }
+    .container p{
+        margin-bottom: 10%;
+    }
+}

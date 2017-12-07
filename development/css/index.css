@@ -1,0 +1,10 @@
+/*
+File: index.css
+Author: Marquis Massie
+Email: massiemarquis@gmail.com
+*/
+@media only screen and (min-width: 401px){
+    .container{
+        margin-bottom: 120px;
+    }
+}

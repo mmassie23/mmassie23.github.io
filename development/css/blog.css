@@ -1,0 +1,13 @@
+/*
+File: blog.css
+Author: Marquis Massie
+Email: massiemarquis@gmail.com
+*/
+.container{
+    margin-bottom: 100%;
+}
+@media only screen and (min-width: 401px){
+    .container{
+        margin-bottom: 30%;
+    }
+}

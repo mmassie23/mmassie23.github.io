@@ -1,0 +1,75 @@
+/*  Mobile view*/
+
+h1{
+        display: block;
+        font-size: 70px;
+        text-align: center;
+        width: 50%;
+        position: absolute;
+        left: 20%;
+        top: 8%;
+        clear: both;
+        margin-left: 0;
+        opacity: .5;
+    }
+button{
+        width: 90px;
+        height: 40px;
+        position: absolute;
+        top: 80%;
+        left: 40%;
+        background-color: white;
+        border-radius: 10px;
+        font-size: 10pt;
+
+}
+button:hover{
+        background-color: lightgreen;
+        color: white;
+}
+/* Desktop */
+@media only screen and (min-width: 401px){
+    #bg{
+        display: block;
+    }
+    #bg::after{
+        content: "";
+        background-image: url("/assets/animations/star-traveling-animated-gif-sci-fi-image.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: fixed;
+        z-index: -1;
+    }
+    h1{
+        display: block;
+        font-size: 70px;
+        text-align: center;
+        width: 50%;
+        position: absolute;
+        left: 25%;
+        top: 18%;
+        clear: both;
+        margin-left: 0;
+        opacity: .5;
+    }
+    button{
+        width: 90px;
+        height: 40px;
+        position: absolute;
+        top: 55%;
+        left: 47%;
+        background-color: white;
+        border-radius: 10px;
+        font-size: 10pt;
+
+    }
+    button:hover{
+        background-color: lightgreen;
+        color: white;
+    }
+}
