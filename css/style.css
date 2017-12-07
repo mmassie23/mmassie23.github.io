@@ -27,6 +27,7 @@ ul{
 		width: 250px;
 		height: 200px;
 		-webkit-transform: rotate(0.25turn);
+		transform: rotate(0.25turn);
 		border-radius: 50% 50%;
 		margin-top: 15%;
 	}
