@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<!-- Only use source files during development. Please comment out, use demo HTML copy, or download PHP version to display completed work.
+		<link rel="stylesheet" href="js/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css">
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/bootstrap-4.0.0-dist/js/bootstrap.js"></script> -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/maps.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-md-4">
+					<figure>
+						<img class="img-thumbnail" src="Inland%20Empire%20MAGNET%202017.jpg">
+						<figcaption>Company Logo</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-4"><h1>Company Slogan</h1></div>
+				<div class="col-md-4"><p>Call to action</p></div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="container">
+						<nav>
+							<ul class="nav justify-content-center">
+								<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">AboutUs</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">Service Area</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">ContactUs</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="text-center">We service several areas in the Los Angeles area<br/></h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5"></div>
+				<div class="col-xs-3 map-search">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="City or Zipcode" id="zip"/>
+						<div class="input-group-btn">
+							<button class="btn btn-dark" type="submit" onclick="convertAddress()">Search</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+				
+			<div id="map"></div>
+				
+		</div>
+		<script>
+			var map;
+			var geocoder;
+			var userLat = 34.0522, userLng = -118.2437;
+			//creates a google map image
+			function initMap(){
+				geocoder = new google.maps.Geocoder();
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: {lat: userLat, lng: userLng},
+					zoom: 10
+				});
+			}
+			//Function used to set the lat and lng coordinates
+			function setCoords(lat, long){
+				userLat = lat;
+				userLng = long;
+			}
+			//Function that retrieves the lat and lng coordinates of the specified zipcode or address
+			function convertAddress(){
+				var local = document.getElementById("zip").value;
+				geocoder = new google.maps.Geocoder();
+				geocoder.geocode({'address': local}, {componentRestrictions:{county: 'US'}}, function(results, status){
+					if(status == google.maps.GeocoderStatus.OK){
+						setCoords(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+					   initMap();
+					}
+				});
+			}
+		</script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC0BWegMlymMCer_JCYjN5raVcYAr64uZM
+&callback=initMap" async defer></script>
+	</body>
+</html>
