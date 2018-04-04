@@ -1,0 +1,20 @@
+/*
+File: style.css
+Author: Marquis Massie
+Author Email: massiemarquis@gmail.com
+Description: Main stylesheet for fencing company website
+*/
+#map-nav{
+	background-color: rgb(50,100,170);
+}
+nav li{
+	margin-left: 10%;
+}
+nav li a{
+	color: white;
+}
+nav li a:hover{
+	background-color: white;
+	color: rgb(50,100,170);
+}
+/*Change the left margin on the input field only on the mobile version of the website*/
