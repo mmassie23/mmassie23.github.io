@@ -1,0 +1,23 @@
+/*
+File: maps.css
+Author: Marquis Massie
+Author Email: massiemarquis@gmail.com
+Description: Stylesheet for Google maps API on service-map.html/service-map.php
+*/
+/* Change the size of the map to take up only 2/3 of the container and set the height to be 500px */
+#map{
+	width: 70%;
+	height: 400px;
+	margin: auto; 
+}
+.map-search{
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+/*
+html, body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+*/

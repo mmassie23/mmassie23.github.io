@@ -1,0 +1,44 @@
+/*
+File: style.css
+Author: Marquis Massie
+Author Email: massiemarquis@gmail.com
+Description: Main stylesheet for fencing company website
+*/
+.col-md-9{
+	padding: 0;
+}
+.banner .col-md-6{
+	padding: 0;
+}
+.img-thumbnail{
+	padding: 0;
+}
+#map-nav{
+	background-color: rgb(50,100,170);
+}
+#map-nav ul li a{
+	color: black;
+}
+.wp-footer, .wp-footer a{
+	color: white;
+}
+#map-nav nav li .active{
+	color: rgb(50,100,170);
+}
+
+#fence-slide img{
+	width: 100%;
+}
+.f-content{
+	display: inline;
+	width: 32%;
+}
+.wp-footer .col-md-6{
+	background-color: darkgray;
+}
+.wp-footer .col-lg-12{
+	width: 100%;
+	background-color: rgb(50,100,170);
+	padding: 0;
+}
+/*Change the left margin on the input field only on the mobile version of the website*/
