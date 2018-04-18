@@ -4,6 +4,9 @@ Author: Marquis Massie
 Author Email: massiemarquis@gmail.com
 Description: Main stylesheet for fencing company website
 */
+body{
+	
+}
 .col-md-9{
 	padding: 0;
 }
@@ -13,6 +16,7 @@ Description: Main stylesheet for fencing company website
 .img-thumbnail{
 	padding: 0;
 }
+
 #map-nav{
 	background-color: rgb(50,100,170);
 }
@@ -25,10 +29,11 @@ Description: Main stylesheet for fencing company website
 #map-nav nav li .active{
 	color: rgb(50,100,170);
 }
-
+/* Images in index page slideshow */
 #fence-slide img{
 	width: 100%;
 }
+/* three-column summary in index page */
 .f-content{
 	display: inline;
 	width: 32%;
