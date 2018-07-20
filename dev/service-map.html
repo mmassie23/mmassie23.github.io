@@ -13,7 +13,14 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				if((navigator.userAgent.indexOf("Safari") != -1){
+					alert("Please make sure to enable JavaScript for service map viewing");
+				}
+			});
+			
+		</script>
 		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC0BWegMlymMCer_JCYjN5raVcYAr64uZM
 		&callback=initMap" async defer></script>
 	</head>
@@ -38,7 +45,12 @@
 							<ul class="nav nav-tabs justify-content-center">
 								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 								<li class="nav-item"><a class="nav-link" href="fence-about.html">About Us</a></li>
-								<li class="nav-item"><a class="nav-link active" href="service-map.html">Service Area</a>
+								<!-- This navigation item is a dropdown for the services i.e.fences provides -->
+								<li class="nav-item dropdown"><a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="service-map.html">Services</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="fence-gallery.html">Product Gallery</a>
+										<a class="dropdown-item" href="service-map.html">Service Map</a>
+									</div>
 								</li>
 								<li class="nav-item"><a class="nav-link" href="fence-contact.html">Contact Us</a></li>
 							</ul>

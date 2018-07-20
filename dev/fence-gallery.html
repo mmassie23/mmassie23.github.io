@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<!-- Only use source files during development. Please comment out, use demo HTML copy, or download PHP version to display completed work.
+		<link rel="stylesheet" href="js/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css">
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/bootstrap-4.0.0-dist/js/bootstrap.js"></script> -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="js/bootstrap-4.0.0-dist/css/bootstrap.css">
+		<link rel="stylesheet" href="js/fancybox-master/dist/jquery.fancybox.css">
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="js/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+		<!-- Insert fancybox javascriptl -->
+		<script src="js/fancybox-master/dist/jquery.fancybox.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row banner">
+				<div class="col-md-6">
+					<a href="index.html">
+						<img class="img-thumbnail" src="images/ief-logo.jpg">
+					</a>
+				</div>
+				<div class="col-md-6">
+					<a href="fence-contact.html">
+						<img class="img-thumbnail" src="images/call-to-action.jpeg">
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12" id="map-nav">
+					<div class="container">
+						<nav>
+							<ul class="nav nav-tabs justify-content-center">
+								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="fence-about.html">About Us</a></li>
+								<!-- This navigation item is a dropdown for the services i.e.fences provides -->
+								<li class="nav-item dropdown"><a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="service-map.html">Services</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="fence-gallery.html">Product Gallery</a>
+										<a class="dropdown-item" href="service-map.html">Service Map</a>
+									</div>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="fence-contact.html">Contact Us</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<!-- End of header for php version when converted for Wordpress site -->
+			<div class="row">
+				<div id="gallery" class="col-md-12">
+					<!-- Fancybox powered gallery filled by javascript code below footer -->
+				</div>
+			</div>
+			<div class="row text-center wp-footer">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="container">
+								<nav>
+									<ul class="nav flex-column">
+										<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+										<li class="nav-item"><a class="nav-link" href="fence-about.html">About Us</a></li>
+										<li class="nav-item"><a class="nav-link" href="service-map.html">Service Area</a></li>
+										<li class="nav-item"><a class="nav-link" href="fence-contact.html">Contact Us</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<blockquote>
+								Phone: +1 909.658.8001<br/>
+								Email: info@iefencing.com<br/>
+								Lic#: 1001488
+							</blockquote>
+						</div>	
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<p>&copy; Inland Empire Fence &amp; Fabrication</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			/*
+			Script for auto-generating fencing product images from gallery_images folder. To add more images name the image file the appropriate number and increase the for loop condition by 1 and similarly for removing images
+			*/
+			for(var i = 1; i < 33; i++){
+				//Before adding new images please open the image in an image editor to determine its EXIF data for rotations
+				$("#gallery").append("<a data-fancybox href='images/gallery_images/fence"+i+".jpg'><img class='gallery-group' src='images/gallery_images/fence"+i+".jpg' alt='Inland Empire Fencing Product'></a>");
+			}
+		</script>
+	</body>
+</html>
