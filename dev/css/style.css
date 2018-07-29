@@ -13,6 +13,10 @@ Description: Main stylesheet for fencing company website
 .img-thumbnail{
 	padding: 0;
 }
+.carousel-inner img{
+	width: auto;
+	height: 360px;
+}
 #map-nav{
 	background-color: rgb(50,100,170);
 }
